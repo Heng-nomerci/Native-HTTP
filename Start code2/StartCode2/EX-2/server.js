@@ -18,6 +18,48 @@ const server = http.createServer((req, res) => {
                 </body>
             </html>
         `);
+  } else if (url === "/about" && method === "GET") {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    return res.end(`
+            <html>
+                <head><title>About</title></head>
+                <body>
+                    <h1>About Us:</h1>
+                    <p>at CADT, we love node.js!</p>
+                </body>
+            </html>
+          `);
+  } else if (url === "/contact-us" && method === "GET") {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    return res.end(`
+            <html>
+                <head><title>Contact-Us</title></head>
+                <body>
+                      <p>You can reach us via email...<p>
+                </body>
+            </html>
+            `);
+  } else if (url === "/products" && method === "GET") {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    return res.end(`
+            <html>
+                <head><title>Products</title></head>
+                <body>
+                      <p>Buy one get one...<p>
+                </body>
+            </html>
+      
+      `);
+  } else if (url === "/projects" && method === "GET") {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    return res.end(`
+            <html>
+                <head><title>Projects</title></head>
+                <body>
+                      <p>Here are our awesome projects<p>
+                </body>
+            </html>
+      `);
   }
   // Implement more routes here
   else {
